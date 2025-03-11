@@ -9,11 +9,15 @@ b = int(input("Кайсы сан: "))
 print(f"Cандар {a} жана {b} суммасы {a + b}")
 
 #3-Задача
-x = [3, 5, 8, 10, 15]
-for i in x:
-    if i == 3 or i == 5 or i == 8 or i == 10 or i == 15:
+numbers = input().split(",")
+
+while True:
+    number = int(input("Число для списка: "))
+    if str (number) in numbers:
         print(f"Cан {i} табылды")
         break
+    else:
+        print(f"Cay {number} табылган жок: ")
 #
 # # #4-Задача
 n= [7, 9, 13, 18, 21]
