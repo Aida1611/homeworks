@@ -20,10 +20,10 @@ while True:
         print(f"Cay {number} табылган жок: ")
 #
 # # #4-Задача
-n= [7, 9, 13, 18, 21]
-for num in n:
-    if num % 2 == 0:
-        print(f"Биринчи жуп сан {num}")
+numbers = input().split(",")
+for number in numbers:
+    if int (number) % 2 == 0:
+        print(f"Биринчи жуп сан {number}")
         break
 
 #5-Задача
