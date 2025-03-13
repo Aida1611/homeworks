@@ -11,10 +11,15 @@ numbers = [5, 12, 7, 18, 3, 10, 8]
 res = [n for n in numbers if n > 7]     #7 ден чон сандарды тандоо
 print(res)
 
+###3-Задача
+print(int(i) for i in input().split (",") if int(i)>7)
+
 ##4-Задача
 words = ["яблоко", "банан", "вишня"]   ##создорду чон тамгага озгорт
 res = [i.upper() for i in words]
 print(res)
+###4-Задача
+print([i.upper() for i in words])
 
 ##5-Задача
 number= int (input("Сан жазыныз: "))
@@ -28,5 +33,5 @@ print(res)
 
 ##7-ЗадачаAida1611
 n = [4, -1, 7, -3, 0, 9, -2]
-res = [i if i >= 0 else 0 for i in n]
+res = [i if i >= 0 else 0 for i in n]   ##терс сандарды 0 го аймаштырдык
 print(res)
