@@ -13,7 +13,7 @@ print(res)
 
 ##4-Задача
 words = ["яблоко", "банан", "вишня"]   ##создорду чон тамгага озгорт
-res = [i for i in words]
+res = [i.upper() for i in words]
 print(res)
 
 ##5-Задача
@@ -26,7 +26,7 @@ number= int (input("Сан жазыныз: "))
 res = "Жуп сан" if number % 2 == 0 else  "Так сан"
 print(res)
 
-##7-Задача
+##7-ЗадачаAida1611
 n = [4, -1, 7, -3, 0, 9, -2]
 res = [i if i >= 0 else 0 for i in n]
 print(res)
