@@ -3,9 +3,9 @@ from calendar import month
 def season(month):
     if 3 <= month <= 5:
         return "Весна"
-    elif 6 < month < 8:
+    elif 5 < month < 9:
         return "Лето"
-    elif 9 < month < 11:
+    elif 8 < month < 12:
         return "Осень"
     else:
         return "Зима"
