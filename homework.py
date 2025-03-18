@@ -1,14 +1,16 @@
 ##1-Task
 from calendar import month
-def season(month):
-    if 3 <= month <= 5:
+def season (month):
+    if 1 <= month <= 2 or month == 12:
+        return "Зима"
+    elif 3 <= month <= 5:
         return "Весна"
-    elif 5 < month < 9:
+    elif 6 <= month <= 8:
         return "Лето"
-    elif 8 < month < 12:
+    elif 9 <= month <= 11:
         return "Осень"
     else:
-        return "Зима"
+        return "Другое"
 print(season(1))
 print(season(2))
 print(season(3))
@@ -20,23 +22,48 @@ print(season(8))
 print(season(9))
 print(season(10))
 print(season(11))
-print(season(13))
+print(season(12))
+
+
+###1
+
+def season (month):
+    if month in (1, 2, 12):
+        return "Зима"
+    elif month in (3, 4, 5):
+        return "Весна"
+    elif month in (6, 7, 8):
+        return "Лето"
+    elif month in (9, 10, 11):
+        return "Осень"
+    else:
+        return "Другое"
+print(season(1))
+print(season(2))
+print(season(3))
+print(season(4))
+print(season(5))
+print(season(6))
+print(season(7))
+print(season(8))
+print(season(9))
+print(season(10))
+print(season(11))
+print(season(12))
 
 ##2-Task
 from datetime import date
-from datetime import datetime, date
-from calendar import month
-from datetime import date, MAXYEAR, MINYEAR
-def date (day, month, year):
-    if 1 <= day < 31 and 1 < month < 12 and MINYEAR  < year < MAXYEAR:
-        return "True"
-    else:
-        return "False"
+def is_date (day, month, year):
+   return date (year, month, day)
 
-print(date(29,2, 2020))
-print(date(30,2, 2021))
-print(date(31,4, 2023))
-print(date(15,8, 2023))
+print(is_date(29,2, 2020))
+print(is_date(29,2, 2025))
+print(is_date(30,2, 2021))
+print(is_date(31,4, 2023))
+print(is_date(15,8, 2023))
 
 
 
+def func(a,b, c): # a,b, c-параметр
+    pass
+func(2, 4, 5)
