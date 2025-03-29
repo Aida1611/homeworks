@@ -1,10 +1,16 @@
 import datetime
+
 parking_data = {}  # Хранилище информации о талонах
-PRICE_PER_HOUR = 50  # Стоимость парковки за 1 час (можно изменить)
+PRICE_PER_HOUR = 50  # Стоимость парковки за 1 час
 
 
 def issue_ticket():
-    car_number = input("Введите номер машины: ")  # Оставляем строковым значением
+    car_number = input("Введите номер машины: ").strip()
+
+    if not car_number or car_number.isalpha() or car_number.isdigit():
+        print("Ошибка: Номер машины должен содержать и буквы, и цифры.")
+        return
+
     ticket_number = len(parking_data) + 123456  # Генерация номера талона
     entry_time = datetime.datetime.now()  # Фиксация времени въезда
 
@@ -14,15 +20,6 @@ def issue_ticket():
     print(f"Номер талона: {ticket_number}")
     print(f"Номер машины: {car_number}")
     print(f"Время въезда: {entry_time.strftime('%Y-%m-%d %H:%M:%S')}\n")
-
-
-def return_car():
-    try:
-        car_number = input("Введите номер машины: ").strip()
-    except ValueError:
-        if car_number.isalnum():
-            print("Ошибка: Неверный формат номера машины. Он должен содержать только буквы и цифры, минимум 3 символа.\n")
-            return
 
 def return_ticket():
     try:
