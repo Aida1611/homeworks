@@ -58,7 +58,6 @@ def calculate_parking_fee(ticket_number):
     print(f"Продолжительность парковки: {int(hours_parked)} часов")
     print(f"Стоимость парковки: {fee} сом")
 
-
 def main():
     while True:
         # Меню действий
@@ -74,7 +73,6 @@ def main():
             calculate_parking_fee(ticket_number)
         else:
             print("Некорректный выбор. Попробуйте снова.")
-
 
 if __name__ == "__main__":
     main()
