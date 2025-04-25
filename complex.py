@@ -1,27 +1,51 @@
-import pygame
-pygame.init()
+import random
+# def game():
+#     a = random.randint(1, 100)
+#     b = 0
+#     print(f'')
+#
+#     while True:
+#         d = int(input("Cан танда:     "))
+#         b += 1
+#
+#         if a < d:
+#             print ("Cен тандаган сан чон ")
+#         elif a > d:
+#             print ('Сен тандаган сан кичине')
+#         else:
+#             print(f'Cен тандаган сан {a} = {d} менен барабар попытка {b}')
+#             break
+#
+# game()
 
-display = pygame.display.set_mode((700, 400))
-pygame.display.set_caption('Hi this ')
-icon = pygame.image.load('image/maska.png')
-pygame.display.set_icon(icon)
 
-square = pygame.Surface((150, 175))
-square.fill('red')
+#2 Task
+# import random
+# def game():
+#         a=random.randint(1, 2)
+#         b= 1 or 2
+#         print("Оюн башталды")
+#
+#         if a == b:
+#             print("Орел")
+#         else:
+#             print("Решка")
+#
+# game()
 
-run = True
-while run:
+import random
+def fruit():
+    fruits= ["алма", "банан", "анар", "хурма", "алмурут", "алча", "кулпунай", "арбуз", "коон"]
+    a=random.choice(fruits)
+    attempt=0
+    print ("Созду тап")
 
-    display.blit(square, (70, 60))
-    pygame.draw.circle(display, 'white')
-
-
-    pygame.display.update()
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-            pygame.guit()
-        elif event.type ==pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                display.fill((255, 255, 255))
+    while True:
+        d = (input("Cоз танда:     "))
+        attempt += 1
+        if d == a:
+            print(f"Куттуктайм созду, {attempt}- аракеттен кийин таптын")
+            break
+        else:
+            print("Cозду тапкан жоксун")
+fruit()
